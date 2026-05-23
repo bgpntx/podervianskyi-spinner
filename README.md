@@ -1,10 +1,24 @@
 # Podervianskyi Spinner Verbs — a Claude Code plugin
 
 Replaces Claude Code's spinner words (the little "Discombobulating…" / "Pondering…"
-labels) with phrases in the style of **Лесь Подерв'янський** (Les Podervianskyi).
+labels) with Ukrainian phrases. Ships **three packs** you pick from on install — in the
+style of playwright **Лесь Подерв'янський** (Les Podervianskyi), a profanity-free variant,
+and a set of Ukrainian political memes.
 
-> ⚠️ **Strong language / NSFW.** These are surzhyk phrases full of profanity, taken from
-> and inspired by Podervianskyi's plays. Install only if that's the vibe you want in your terminal.
+## The three packs
+
+```text
+Regular (Podervianskyi)        SFW-light                 Political memes
+─────────────────────────      ──────────────────        ────────────────────────────
+⠋ Хуйня якась…                 ⠋ Думку гоняю…            ⠋ Астанавітєсь!…
+⠙ Там масла дохуя!…            ⠙ Буття визначає код…     ⠹ В мене калізія…
+⠹ Кажись піздєц!…              ⠸ Філософствую тіхо…      ⠼ Боже, дапамажи…
+⠸ В пизду Брамса!…             ⠴ Сократ би заплакав…     ⠦ Сьогодні буде дощ. Або сніг…
+88 verbs · NSFW                72 verbs · clean          104 verbs · some strong language
+```
+
+> ⚠️ **Strong language / NSFW.** The Regular and Political packs contain profanity (surzhyk
+> phrases from Podervianskyi's plays and political quotes). Pick **SFW-light** if you want it clean.
 
 > 💻 **Claude Code CLI only.** `spinnerVerbs` customizes the terminal spinner. The Claude
 > Desktop app has no text spinner with verbs, so custom verbs won't render there — the plugin
