@@ -41,20 +41,20 @@ their author. If the rights holder objects, open an issue and it comes down.
 /plugin install podervianskyi-spinner@spinner-verbs
 ```
 
-**3. Pick a verb pack** — run one of:
+**3. Install the verbs** — run this, and you'll be **asked which pack** you want:
 
 ```text
 /podervianskyi-spinner:install
 ```
 
-```text
-/podervianskyi-spinner:install-sfw
-```
-
-| Command | Pack | Verbs |
+| Pack | Contents | Verbs |
 | --- | --- | --- |
-| `:install` | **Full** — verbatim quotes, strong language / NSFW | 88 |
-| `:install-sfw` | **SFW-light** — same absurdist vibe, no profanity | 72 |
+| **Regular** | Full Podervianskyi — verbatim quotes, strong language / NSFW | 88 |
+| **SFW-light** | Same absurdist vibe, no profanity | 72 |
+| **Political memes** | Ukrainian Kuchma→wartime quotes: Azarov-isms, Klitschko, бавовна & co. (some strong language) | 104 |
+
+Prefer to skip the prompt? Two direct shortcuts also exist:
+`/podervianskyi-spinner:install-sfw` and `/podervianskyi-spinner:install-political`.
 
 **4. Restart Claude Code.**
 
@@ -117,12 +117,14 @@ cp ~/.claude/settings.json.bak-<timestamp> ~/.claude/settings.json
 .claude-plugin/marketplace.json          # marketplace listing
 plugins/podervianskyi-spinner/
 ├── .claude-plugin/plugin.json           # plugin manifest
-├── skills/install/SKILL.md              # /podervianskyi-spinner:install      (full set)
-├── skills/install-sfw/SKILL.md          # /podervianskyi-spinner:install-sfw  (SFW-light)
+├── skills/install/SKILL.md              # /podervianskyi-spinner:install            (pick a pack)
+├── skills/install-sfw/SKILL.md          # /podervianskyi-spinner:install-sfw        (SFW-light)
+├── skills/install-political/SKILL.md    # /podervianskyi-spinner:install-political  (political memes)
 ├── bin/install-verbs.sh                 # merges a verb pack into settings.json (with backup)
 └── assets/
     ├── spinner-verbs.json               # 88 verbs (full / NSFW)
-    └── spinner-verbs-sfw.json           # 72 verbs (SFW-light, no profanity)
+    ├── spinner-verbs-sfw.json           # 72 verbs (SFW-light, no profanity)
+    └── spinner-verbs-political.json     # 104 verbs (Ukrainian political memes)
 ```
 
 > Note: a Claude Code plugin **cannot** set `spinnerVerbs` automatically on enable — plugin-level
