@@ -6,6 +6,10 @@ labels) with phrases in the style of **Лесь Подерв'янський** (L
 > ⚠️ **Strong language / NSFW.** These are surzhyk phrases full of profanity, taken from
 > and inspired by Podervianskyi's plays. Install only if that's the vibe you want in your terminal.
 
+> 💻 **Claude Code CLI only.** `spinnerVerbs` customizes the terminal spinner. The Claude
+> Desktop app has no text spinner with verbs, so custom verbs won't render there — the plugin
+> installs fine but has no visible effect in the desktop GUI.
+
 ## Honest attribution
 
 The author of these texts is **Лесь Подерв'янський** — a Ukrainian playwright and artist.
