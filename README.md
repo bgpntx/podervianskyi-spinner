@@ -29,11 +29,18 @@ their author. If the rights holder objects, open an issue and it comes down.
 ```text
 /plugin marketplace add bgpntx/podervianskyi-spinner
 /plugin install podervianskyi-spinner@spinner-verbs
-/podervianskyi-spinner:install
 ```
 
-Then **restart Claude Code**. The installer backs up your existing
-`~/.claude/settings.json` (as `settings.json.bak-<timestamp>`) before writing.
+Then pick a verb pack:
+
+| Command | Pack | Verbs |
+| --- | --- | --- |
+| `/podervianskyi-spinner:install` | **Full** — verbatim quotes, strong language / NSFW | 88 |
+| `/podervianskyi-spinner:install-sfw` | **SFW-light** — same absurdist vibe, no profanity | 72 |
+
+Then **restart Claude Code**. Either installer backs up your existing
+`~/.claude/settings.json` (as `settings.json.bak-<timestamp>`) before writing, and uses
+`mode: "replace"` (only these verbs show). Re-run the other command anytime to switch packs.
 
 Requires [`jq`](https://jqlang.github.io/jq/).
 
@@ -41,7 +48,8 @@ Requires [`jq`](https://jqlang.github.io/jq/).
 
 Don't want a plugin? Just merge this into `~/.claude/settings.json` yourself — copy the
 `spinnerVerbs` object from
-[`plugins/podervianskyi-spinner/assets/spinner-verbs.json`](plugins/podervianskyi-spinner/assets/spinner-verbs.json):
+[`assets/spinner-verbs.json`](plugins/podervianskyi-spinner/assets/spinner-verbs.json) (full)
+or [`assets/spinner-verbs-sfw.json`](plugins/podervianskyi-spinner/assets/spinner-verbs-sfw.json) (SFW-light):
 
 ```json
 {
@@ -70,9 +78,12 @@ cp ~/.claude/settings.json.bak-<timestamp> ~/.claude/settings.json
 .claude-plugin/marketplace.json          # marketplace listing
 plugins/podervianskyi-spinner/
 ├── .claude-plugin/plugin.json           # plugin manifest
-├── skills/install/SKILL.md              # the /podervianskyi-spinner:install command
-├── bin/install-verbs.sh                 # merges verbs into settings.json (with backup)
-└── assets/spinner-verbs.json            # the 84 verbs
+├── skills/install/SKILL.md              # /podervianskyi-spinner:install      (full set)
+├── skills/install-sfw/SKILL.md          # /podervianskyi-spinner:install-sfw  (SFW-light)
+├── bin/install-verbs.sh                 # merges a verb pack into settings.json (with backup)
+└── assets/
+    ├── spinner-verbs.json               # 88 verbs (full / NSFW)
+    └── spinner-verbs-sfw.json           # 72 verbs (SFW-light, no profanity)
 ```
 
 > Note: a Claude Code plugin **cannot** set `spinnerVerbs` automatically on enable — plugin-level

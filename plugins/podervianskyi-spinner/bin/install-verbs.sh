@@ -4,7 +4,8 @@
 set -euo pipefail
 
 SETTINGS="${HOME}/.claude/settings.json"
-VERBS="${CLAUDE_PLUGIN_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}/assets/spinner-verbs.json"
+ASSET="${1:-spinner-verbs.json}"   # which verb pack: full (default) or spinner-verbs-sfw.json
+VERBS="${CLAUDE_PLUGIN_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}/assets/${ASSET}"
 
 if ! command -v jq >/dev/null 2>&1; then
   echo "Error: 'jq' is required but not found. Install it (e.g. 'brew install jq') and re-run." >&2
