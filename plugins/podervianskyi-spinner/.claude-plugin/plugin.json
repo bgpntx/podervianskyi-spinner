@@ -1,0 +1,12 @@
+{
+  "name": "podervianskyi-spinner",
+  "description": "Spinner verbs for Claude Code in the style of Les Podervianskyi's plays (Ukrainian, NSFW/strong language).",
+  "version": "1.0.0",
+  "author": {
+    "name": "bgpntx — a humble fan of Les Podervianskyi"
+  },
+  "homepage": "https://github.com/bgpntx/podervianskyi-spinner",
+  "repository": "https://github.com/bgpntx/podervianskyi-spinner",
+  "license": "MIT",
+  "keywords": ["spinner", "ukrainian", "podervianskyi", "fun", "cosmetic", "nsfw"]
+}

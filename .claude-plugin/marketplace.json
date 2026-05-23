@@ -1,0 +1,14 @@
+{
+  "name": "spinner-verbs",
+  "owner": {
+    "name": "bgpntx — a humble fan of Les Podervianskyi"
+  },
+  "plugins": [
+    {
+      "name": "podervianskyi-spinner",
+      "source": "./plugins/podervianskyi-spinner",
+      "description": "Spinner verbs for Claude Code in the style of Les Podervianskyi's plays (Ukrainian, NSFW/strong language).",
+      "version": "1.0.0"
+    }
+  ]
+}
