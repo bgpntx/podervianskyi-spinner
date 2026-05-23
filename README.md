@@ -44,6 +44,22 @@ Then **restart Claude Code**. Either installer backs up your existing
 
 Requires [`jq`](https://jqlang.github.io/jq/).
 
+## Updating (after the verb list changes)
+
+This plugin doesn't apply verbs live — the install command **copies** the verbs into your
+`~/.claude/settings.json` once. So pulling a new version of the plugin does **not** change your
+spinner on its own. After the verb list is updated in the repo, do both steps:
+
+```text
+/plugin marketplace update spinner-verbs    # pull the latest repo into the installed plugin
+/podervianskyi-spinner:install              # re-copy the (now updated) verbs into settings.json
+```
+
+Then **restart Claude Code**. (Use `:install-sfw` instead in step 2 if you're on the SFW pack.)
+
+Without step 2 the spinner keeps showing the verbs from your last install — `settings.json` holds
+a static snapshot, not a live link to the plugin.
+
 ## Manual install (no plugin)
 
 Don't want a plugin? Just merge this into `~/.claude/settings.json` yourself — copy the
