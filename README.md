@@ -26,21 +26,41 @@ their author. If the rights holder objects, open an issue and it comes down.
 
 ## Install
 
+> ⚠️ Run these **one at a time** — paste a single command, press Enter, wait, then the next.
+> Pasting them all at once makes `/plugin marketplace add` swallow the rest as a broken URL.
+
+**1. Add the marketplace:**
+
 ```text
 /plugin marketplace add bgpntx/podervianskyi-spinner
+```
+
+**2. Install the plugin:**
+
+```text
 /plugin install podervianskyi-spinner@spinner-verbs
 ```
 
-Then pick a verb pack:
+**3. Pick a verb pack** — run one of:
+
+```text
+/podervianskyi-spinner:install
+```
+
+```text
+/podervianskyi-spinner:install-sfw
+```
 
 | Command | Pack | Verbs |
 | --- | --- | --- |
-| `/podervianskyi-spinner:install` | **Full** — verbatim quotes, strong language / NSFW | 88 |
-| `/podervianskyi-spinner:install-sfw` | **SFW-light** — same absurdist vibe, no profanity | 72 |
+| `:install` | **Full** — verbatim quotes, strong language / NSFW | 88 |
+| `:install-sfw` | **SFW-light** — same absurdist vibe, no profanity | 72 |
 
-Then **restart Claude Code**. Either installer backs up your existing
-`~/.claude/settings.json` (as `settings.json.bak-<timestamp>`) before writing, and uses
-`mode: "replace"` (only these verbs show). Re-run the other command anytime to switch packs.
+**4. Restart Claude Code.**
+
+Either installer backs up your existing `~/.claude/settings.json` (as
+`settings.json.bak-<timestamp>`) before writing, and uses `mode: "replace"` (only these verbs
+show). Re-run the other command anytime to switch packs.
 
 Requires [`jq`](https://jqlang.github.io/jq/).
 
@@ -48,11 +68,14 @@ Requires [`jq`](https://jqlang.github.io/jq/).
 
 This plugin doesn't apply verbs live — the install command **copies** the verbs into your
 `~/.claude/settings.json` once. So pulling a new version of the plugin does **not** change your
-spinner on its own. After the verb list is updated in the repo, do both steps:
+spinner on its own. After the verb list is updated in the repo, run these **one at a time**:
 
 ```text
-/plugin marketplace update spinner-verbs    # pull the latest repo into the installed plugin
-/podervianskyi-spinner:install              # re-copy the (now updated) verbs into settings.json
+/plugin marketplace update spinner-verbs
+```
+
+```text
+/podervianskyi-spinner:install
 ```
 
 Then **restart Claude Code**. (Use `:install-sfw` instead in step 2 if you're on the SFW pack.)
