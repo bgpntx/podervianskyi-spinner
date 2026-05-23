@@ -14,7 +14,7 @@ Regular (Podervianskyi)        SFW-light                 Political memes
 ⠙ Там масла дохуя!…            ⠙ Буття визначає код…     ⠹ В мене калізія…
 ⠹ Кажись піздєц!…              ⠸ Філософствую тіхо…      ⠼ Боже, дапамажи…
 ⠸ В пизду Брамса!…             ⠴ Сократ би заплакав…     ⠦ Сьогодні буде дощ. Або сніг…
-88 verbs · NSFW                72 verbs · clean          131 verbs · some strong language
+88 verbs · NSFW                72 verbs · clean          132 verbs · some strong language
 ```
 
 > ⚠️ **Strong language / NSFW.** The Regular and Political packs contain profanity (surzhyk
@@ -65,16 +65,16 @@ their author. If the rights holder objects, open an issue and it comes down.
 | --- | --- | --- |
 | **Regular** | Full Podervianskyi — verbatim quotes, strong language / NSFW | 88 |
 | **SFW-light** | Same absurdist vibe, no profanity | 72 |
-| **Political memes** | Ukrainian Kuchma→wartime quotes: Azarov-isms, Klitschko, Moskal, Tsaryov, бавовна & co. (some strong language) | 131 |
+| **Political memes** | Ukrainian Kuchma→wartime quotes: Azarov-isms, Klitschko, Moskal, Tsaryov, бавовна & co. (some strong language) | 132 |
 
 Prefer to skip the prompt? Two direct shortcuts also exist:
 `/podervianskyi-spinner:install-sfw` and `/podervianskyi-spinner:install-political`.
 
 **4. Restart Claude Code.**
 
-Either installer backs up your existing `~/.claude/settings.json` (as
+Each installer backs up your existing `~/.claude/settings.json` (as
 `settings.json.bak-<timestamp>`) before writing, and uses `mode: "replace"` (only these verbs
-show). Re-run the other command anytime to switch packs.
+show). Re-run any of the commands anytime to switch packs.
 
 Requires [`jq`](https://jqlang.github.io/jq/).
 
@@ -101,8 +101,9 @@ a static snapshot, not a live link to the plugin.
 
 Don't want a plugin? Just merge this into `~/.claude/settings.json` yourself — copy the
 `spinnerVerbs` object from
-[`assets/spinner-verbs.json`](plugins/podervianskyi-spinner/assets/spinner-verbs.json) (full)
-or [`assets/spinner-verbs-sfw.json`](plugins/podervianskyi-spinner/assets/spinner-verbs-sfw.json) (SFW-light):
+[`assets/spinner-verbs.json`](plugins/podervianskyi-spinner/assets/spinner-verbs.json) (full),
+[`assets/spinner-verbs-sfw.json`](plugins/podervianskyi-spinner/assets/spinner-verbs-sfw.json) (SFW-light),
+or [`assets/spinner-verbs-political.json`](plugins/podervianskyi-spinner/assets/spinner-verbs-political.json) (political memes):
 
 ```json
 {
@@ -138,7 +139,7 @@ plugins/podervianskyi-spinner/
 └── assets/
     ├── spinner-verbs.json               # 88 verbs (full / NSFW)
     ├── spinner-verbs-sfw.json           # 72 verbs (SFW-light, no profanity)
-    └── spinner-verbs-political.json     # 131 verbs (Ukrainian political memes)
+    └── spinner-verbs-political.json     # 132 verbs (Ukrainian political memes)
 ```
 
 > Note: a Claude Code plugin **cannot** set `spinnerVerbs` automatically on enable — plugin-level
