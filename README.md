@@ -14,7 +14,7 @@ Regular (Podervianskyi)        SFW-light                 Political memes
 ⠙ Там масла дохуя!…            ⠙ Буття визначає код…     ⠹ В мене калізія…
 ⠹ Кажись піздєц!…              ⠸ Філософствую тіхо…      ⠼ Боже, дапамажи…
 ⠸ В пизду Брамса!…             ⠴ Сократ би заплакав…     ⠦ Сьогодні буде дощ. Або сніг…
-88 verbs · NSFW                72 verbs · clean          104 verbs · some strong language
+88 verbs · NSFW                72 verbs · clean          116 verbs · some strong language
 ```
 
 > ⚠️ **Strong language / NSFW.** The Regular and Political packs contain profanity (surzhyk
@@ -65,7 +65,7 @@ their author. If the rights holder objects, open an issue and it comes down.
 | --- | --- | --- |
 | **Regular** | Full Podervianskyi — verbatim quotes, strong language / NSFW | 88 |
 | **SFW-light** | Same absurdist vibe, no profanity | 72 |
-| **Political memes** | Ukrainian Kuchma→wartime quotes: Azarov-isms, Klitschko, бавовна & co. (some strong language) | 104 |
+| **Political memes** | Ukrainian Kuchma→wartime quotes: Azarov-isms, Klitschko, Moskal, бавовна & co. (some strong language) | 116 |
 
 Prefer to skip the prompt? Two direct shortcuts also exist:
 `/podervianskyi-spinner:install-sfw` and `/podervianskyi-spinner:install-political`.
@@ -138,7 +138,7 @@ plugins/podervianskyi-spinner/
 └── assets/
     ├── spinner-verbs.json               # 88 verbs (full / NSFW)
     ├── spinner-verbs-sfw.json           # 72 verbs (SFW-light, no profanity)
-    └── spinner-verbs-political.json     # 104 verbs (Ukrainian political memes)
+    └── spinner-verbs-political.json     # 116 verbs (Ukrainian political memes)
 ```
 
 > Note: a Claude Code plugin **cannot** set `spinnerVerbs` automatically on enable — plugin-level
